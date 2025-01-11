@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}IdeaVault{% endblock %}
+{% block content %}
+<div class="popup-box">
+    <div class="popup">
+        <div class="content">
+            <header>
+                <p>Add New Note</p>
+                <i class='bx bx-x'></i>
+            </header>
+            <form method="POST">
+                <div class="row title">
+                    <label for="title">Title</label>
+                    <input type="text" name="title">
+                </div>
+                <div class="row description">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description"></textarea>
+                </div>
+                <button type="submit">Add Note</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <section class="notepage">
+        <li id="edit-note" class="add-note">
+            <div class="note-icon"><i class='bx bx-plus'></i></div>
+            <p>Add new note</p>
+        </li>
+        {% for note in user.notes %}
+        <li id="edit-note" class="note">
+            <div class="details">
+                <p>{{ note.title }}</p>
+                <span>{{ note.description }}</span>
+            </div>
+            <div class="bottom-content">
+                <p>{{ note.date }}</p>
+                <div class="settings">
+                    <i onClick="showMenu(this)" class='bx bx-dots-vertical-rounded'></i>
+                    <ul class="menu">
+                        <li data-param1="{{ note.id }}" data-param2="{{ note.title }}" data-param3="{{ note.description}}" onClick="updateNoteFromData(this)"><i class='bx bx-pencil'></i>Edit</li>
+                        <li onclick="deleteNote({{ note.id }})"><i class='bx bx-trash'></i>Delete</li>   
+                    </ul>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </section>
+</div>
+{% endblock %}
+
+<div class="footer">
+    
+</div>

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}IdeaVault/login{% endblock %}
+{% block content %}
+<div class="main">
+    <section class="login">
+        <div class="wrapper">
+            <form method="POST">
+                <h2>Login</h2>
+                <div class="input-box">
+                    <input type="email" class="email" name="email" required>
+                    <label>Email</label>
+                    <span class="icon"><i class='bx bxs-envelope'></i></span>
+                </div>
+                <div class="input-box"> 
+                    <input type="password" class="password" name="password" required>
+                    <label>Password</label>
+                    <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                </div>
+                <div class="remember">
+                    <label><input type="checkbox">Remember me<label>
+                </div>
+                <button type="submit">Login</button>
+                <div class="register-link">
+                    <p>Don't have an account? <a href="/sign-up">Register</a></p>
+                </div>                
+            </form>
+        </div>
+    </section>
+</div>
+{% endblock %}
