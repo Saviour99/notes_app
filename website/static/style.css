@@ -183,13 +183,18 @@ button:hover {
 }
 
 .note p {
+    height: 30px;
     font-size: 18px;
     font-weight: 600;
     color: var(--text);
+    overflow: auto;
 }
 
 .note .details span {
     margin-bottom: 7px;
+    height: 187px;
+    overflow: auto;
+    overflow-wrap: break-word;
 }
 
 .note span {

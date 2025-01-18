@@ -9,6 +9,7 @@
                 <i class='bx bx-x'></i>
             </header>
             <form method="POST">
+                <input type="hidden" name="note_id" value="{{ note.id if note else '' }}">
                 <div class="row title">
                     <label for="title">Title</label>
                     <input type="text" name="title">
