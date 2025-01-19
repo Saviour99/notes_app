@@ -1,7 +1,8 @@
 const addBox = document.querySelector(".add-note"),
       popupBox = document.querySelector(".popup-box"),
       closeBox = popupBox.querySelector("header i"),
-      titleTag = popupBox.querySelector("input"),
+      titleTag = popupBox.querySelector("#input-title"),
+      hiddenId = popupBox.querySelector("#hidden-input"),
       descTag = popupBox.querySelector("textarea"),
       addBtn = popupBox.querySelector("button"),
       mainTag = popupBox.querySelector("header p");
@@ -36,6 +37,7 @@ function updateNoteFromData(element) {
     // Set the form fields with current note data
     titleTag.value = title;
     descTag.value = description;
+    hiddenId.value = noteId
     mainTag.innerText = "Update Note"; // Change header text to Update
     addBtn.innerText = "Update Note"; // Change button text to Update
 
