@@ -298,7 +298,7 @@ button:hover {
 
 .popup .content {
     height: 100%;
-    max-width: 360px;
+    min-width: 320px;
     width: 100%;
     background-color: var(--bg);
     padding: 15px;
@@ -371,8 +371,4 @@ button:hover {
     border-radius: 5px;
     width: 109.5%;
     margin-left: -12px;
-}
-
-.footer {
-  margin-bottom: 100px;
 }
