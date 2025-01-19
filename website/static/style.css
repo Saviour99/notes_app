@@ -14,6 +14,7 @@
 
 body {
     background-color: var(--bg);
+    min-height: 100vh;
 }
 
 .header nav{
@@ -21,7 +22,8 @@ body {
 }
 
 .main {
-    height: 85vh;
+    min-height: 85vh;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -372,5 +374,5 @@ button:hover {
 }
 
 .footer {
-    margin-bottom: 10px;
+  margin-bottom: 100px;
 }
