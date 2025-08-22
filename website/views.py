@@ -4,10 +4,10 @@ from .models import Note
 from . import db
 import json
 
-views = Blueprint('views', __name__)
+views = Blueprint("views", __name__)
 
 # Homepage route to add new note or update existing one
-@views.route('/', methods=['GET', 'POST'])
+@views.route("/", methods=["GET", "POST"])
 @login_required
 def homepage():
     if request.method == 'POST':
