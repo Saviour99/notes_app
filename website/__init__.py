@@ -9,7 +9,6 @@ import os
 
 load_dotenv()
 
-
 db = SQLAlchemy()
 DB_NAME = "database.db"
 
