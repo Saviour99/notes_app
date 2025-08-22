@@ -52,7 +52,7 @@ def delete_note():
     return jsonify({})
 
 # Route to update a note
-@views.route('/update-note', methods=['PUT'])
+@views.route("/update-note", methods=["PUT"])
 def update_note():
     note_data = json.loads(request.data)
     note_id = note_data['noteId']
